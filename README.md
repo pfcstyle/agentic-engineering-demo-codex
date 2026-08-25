@@ -13,6 +13,8 @@ This repository is the implementation workspace for the Codex agentic-engineerin
 - [Figma Design approval](handoff/07-figma-design-approval.md)
 - [Figma Make high-fidelity handoff](handoff/08-figma-make-hifi-handoff.md)
 - [Figma Make high-fidelity approval](handoff/09-figma-make-hifi-approval.md)
+- [Natural-language acceptance contract](handoff/10-natural-language-acceptance-contract.md)
+- [Acceptance and development Issue approval](handoff/11-acceptance-and-development-issues.md)
 - [Tutorial evidence manifest](handoff/evidence-manifest.md)
 
 ## Delivery workflow

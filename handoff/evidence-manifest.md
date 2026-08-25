@@ -76,3 +76,18 @@
 | `phase-04-hifi-handoff-github.png` | [GitHub high-fidelity handoff](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/08-figma-make-hifi-handoff.md) | Stage 4 handoff, zh/en | Verified |
 | `phase-04-hifi-approval-github.png` | [GitHub approval record](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/09-figma-make-hifi-approval.md) | Stage 4 approval, zh/en | Verified |
 | `phase-04-hifi-approval-commit.png` | [GitHub commit `36e9000`](https://github.com/pfcstyle/agentic-engineering-demo-codex/commit/36e9000) | Stage completion, zh/en | Verified |
+
+## Phase 5 — Acceptance Contract and Development Issues
+
+| File | Source | Tutorial use | Status |
+| --- | --- | --- | --- |
+| `phase-05-source-inventory-facts.png` | GitHub acceptance contract | Source scan and fact ledger, zh/en | Pending capture |
+| `phase-05-test-inventory.png` | GitHub acceptance contract | Classified 27-case inventory, zh/en | Pending capture |
+| `phase-05-detailed-save-failure-case.png` | GitHub acceptance contract | Representative detailed recovery case, zh/en | Pending capture |
+| `phase-05-coverage-matrix.png` | GitHub acceptance contract | Fact-to-case coverage matrix, zh/en | Pending capture |
+| `phase-05-issue-1.png` | [GitHub Issue #1](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/1) | Queue/search/filter Acceptance Criteria, zh/en | Pending capture |
+| `phase-05-issue-2.png` | [GitHub Issue #2](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/2) | Detail/permission/recovery Acceptance Criteria, zh/en | Pending capture |
+| `phase-05-issue-3.png` | [GitHub Issue #3](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/3) | Visual/responsive/state Acceptance Criteria, zh/en | Pending capture |
+| `phase-05-acceptance-contract-github.png` | GitHub acceptance contract | Stage 5 contract overview, zh/en | Pending capture |
+| `phase-05-development-issues-github.png` | GitHub development Issue approval | Issue split and execution order, zh/en | Pending capture |
+| `phase-05-acceptance-commit.png` | GitHub stage commit | Stage completion, zh/en | Pending capture |
