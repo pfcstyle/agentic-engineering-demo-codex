@@ -7,6 +7,7 @@ This repository is the implementation workspace for the Codex agentic-engineerin
 - [Product contract](handoff/01-product-contract.md)
 - [Figma Make planning handoff](handoff/02-figma-make-plan.md)
 - [Product approval record](handoff/03-product-approval.md)
+- [Figma Make wireframe approval](handoff/04-figma-make-wireframe-approval.md)
 
 ## Delivery workflow
 
