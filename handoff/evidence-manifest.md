@@ -73,6 +73,6 @@
 | `phase-04-hifi-save-retry-success.png` | Figma Make Version 7 | Successful retry and committed owner, zh/en | Verified |
 | `phase-04-hifi-mobile-queue.png` | Figma Make Version 7, iPhone device preview | Mobile queue cards, zh/en | Verified |
 | `phase-04-hifi-mobile-detail.png` | Figma Make Version 7, iPhone device preview | Mobile detail sheet, zh/en | Verified |
-| `phase-04-hifi-handoff-github.png` | GitHub high-fidelity handoff | Stage 4 handoff, zh/en | Pending capture |
-| `phase-04-hifi-approval-github.png` | GitHub approval record | Stage 4 approval, zh/en | Pending capture |
-| `phase-04-hifi-approval-commit.png` | GitHub stage commit | Stage completion, zh/en | Pending capture |
+| `phase-04-hifi-handoff-github.png` | [GitHub high-fidelity handoff](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/08-figma-make-hifi-handoff.md) | Stage 4 handoff, zh/en | Verified |
+| `phase-04-hifi-approval-github.png` | [GitHub approval record](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/09-figma-make-hifi-approval.md) | Stage 4 approval, zh/en | Verified |
+| `phase-04-hifi-approval-commit.png` | [GitHub commit `36e9000`](https://github.com/pfcstyle/agentic-engineering-demo-codex/commit/36e9000) | Stage completion, zh/en | Verified |
