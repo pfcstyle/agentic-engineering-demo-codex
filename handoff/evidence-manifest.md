@@ -51,6 +51,6 @@
 | `phase-03-states-responsive.png` | Figma Design page 04 | State matrix and responsive rules, zh/en | Verified |
 | `phase-03-agent-handoff-synthesis.png` | Figma Design Agent | Handoff synthesis, zh/en | Verified |
 | `phase-03-handoff-notes.png` | Figma Design page 05 | Engineering handoff, zh/en | Verified |
-| `phase-03-design-handoff-github.png` | GitHub handoff document | Design handoff, zh/en | Pending capture after push |
-| `phase-03-design-approval-github.png` | GitHub approval document | Design approval, zh/en | Pending capture after push |
-| `phase-03-design-approval-commit.png` | GitHub phase 3 commit | Stage completion, zh/en | Pending capture after push |
+| `phase-03-design-handoff-github.png` | [GitHub handoff document](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/06-figma-design-handoff.md) | Design handoff, zh/en | Verified |
+| `phase-03-design-approval-github.png` | [GitHub approval document](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/07-figma-design-approval.md) | Design approval, zh/en | Verified |
+| `phase-03-design-approval-commit.png` | [GitHub commit `4235036`](https://github.com/pfcstyle/agentic-engineering-demo-codex/commit/4235036) | Stage completion, zh/en | Verified |
