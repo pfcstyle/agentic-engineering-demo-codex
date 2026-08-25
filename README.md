@@ -11,4 +11,5 @@ Product analysis is complete. The approved behavior contract and the Figma Make 
 - Project: https://github.com/users/pfcstyle/projects/2/views/1
 - Product contract: [`handoff/01-product-prompt.md`](handoff/01-product-prompt.md)
 - Figma Make planning handoff: [`handoff/02-figma-make-plan.md`](handoff/02-figma-make-plan.md)
+- Product approval record: [`handoff/03-product-review.md`](handoff/03-product-review.md)
 
