@@ -54,3 +54,25 @@
 | `phase-03-design-handoff-github.png` | [GitHub handoff document](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/06-figma-design-handoff.md) | Design handoff, zh/en | Verified |
 | `phase-03-design-approval-github.png` | [GitHub approval document](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/07-figma-design-approval.md) | Design approval, zh/en | Verified |
 | `phase-03-design-approval-commit.png` | [GitHub commit `4235036`](https://github.com/pfcstyle/agentic-engineering-demo-codex/commit/4235036) | Stage completion, zh/en | Verified |
+
+## Phase 4 — High-Fidelity Prototype
+
+| File | Source | Tutorial use | Status |
+| --- | --- | --- | --- |
+| `phase-04-design-context-attached.png` | Figma Make | Approved Design context attachment, zh/en | Verified |
+| `phase-04-make-agent-implementation.png` | Figma Make Agent | High-fidelity generation result, zh/en | Verified |
+| `phase-04-hifi-default.png` | Figma Make Version 5 | High-fidelity default queue, zh/en | Verified |
+| `phase-04-hifi-lead-drawer.png` | Figma Make Version 5 | Lead editable drawer, zh/en | Verified |
+| `phase-04-hifi-analyst-readonly.png` | Figma Make Version 5 | Analyst read-only permission, zh/en | Verified |
+| `phase-04-hifi-closed-readonly.png` | Figma Make Version 5 | Closed read-only permission, zh/en | Verified |
+| `phase-04-hifi-no-results.png` | Figma Make Version 5 | No Results recovery, zh/en | Verified |
+| `phase-04-hifi-loading.png` | Figma Make Version 5 | Loading state, zh/en | Verified |
+| `phase-04-hifi-empty-source.png` | Figma Make Version 5 | Empty Source state, zh/en | Verified |
+| `phase-04-hifi-load-error.png` | Figma Make Version 5 | Load Error and Retry, zh/en | Verified |
+| `phase-04-hifi-save-failure.png` | Figma Make Version 7 | Durable Save Failure and Retry, zh/en | Verified |
+| `phase-04-hifi-save-retry-success.png` | Figma Make Version 7 | Successful retry and committed owner, zh/en | Verified |
+| `phase-04-hifi-mobile-queue.png` | Figma Make Version 7, iPhone device preview | Mobile queue cards, zh/en | Verified |
+| `phase-04-hifi-mobile-detail.png` | Figma Make Version 7, iPhone device preview | Mobile detail sheet, zh/en | Verified |
+| `phase-04-hifi-handoff-github.png` | GitHub high-fidelity handoff | Stage 4 handoff, zh/en | Pending capture |
+| `phase-04-hifi-approval-github.png` | GitHub approval record | Stage 4 approval, zh/en | Pending capture |
+| `phase-04-hifi-approval-commit.png` | GitHub stage commit | Stage completion, zh/en | Pending capture |

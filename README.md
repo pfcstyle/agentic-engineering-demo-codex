@@ -11,6 +11,8 @@ This repository is the implementation workspace for the Codex agentic-engineerin
 - [Visual inspiration research](handoff/05-visual-inspiration.md)
 - [Figma Design handoff](handoff/06-figma-design-handoff.md)
 - [Figma Design approval](handoff/07-figma-design-approval.md)
+- [Figma Make high-fidelity handoff](handoff/08-figma-make-hifi-handoff.md)
+- [Figma Make high-fidelity approval](handoff/09-figma-make-hifi-approval.md)
 - [Tutorial evidence manifest](handoff/evidence-manifest.md)
 
 ## Delivery workflow
