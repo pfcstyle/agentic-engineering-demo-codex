@@ -81,13 +81,13 @@
 
 | File | Source | Tutorial use | Status |
 | --- | --- | --- | --- |
-| `phase-05-source-inventory-facts.png` | GitHub acceptance contract | Source scan and fact ledger, zh/en | Pending capture |
-| `phase-05-test-inventory.png` | GitHub acceptance contract | Classified 27-case inventory, zh/en | Pending capture |
-| `phase-05-detailed-save-failure-case.png` | GitHub acceptance contract | Representative detailed recovery case, zh/en | Pending capture |
-| `phase-05-coverage-matrix.png` | GitHub acceptance contract | Fact-to-case coverage matrix, zh/en | Pending capture |
-| `phase-05-issue-1.png` | [GitHub Issue #1](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/1) | Queue/search/filter Acceptance Criteria, zh/en | Pending capture |
-| `phase-05-issue-2.png` | [GitHub Issue #2](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/2) | Detail/permission/recovery Acceptance Criteria, zh/en | Pending capture |
-| `phase-05-issue-3.png` | [GitHub Issue #3](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/3) | Visual/responsive/state Acceptance Criteria, zh/en | Pending capture |
-| `phase-05-acceptance-contract-github.png` | GitHub acceptance contract | Stage 5 contract overview, zh/en | Pending capture |
-| `phase-05-development-issues-github.png` | GitHub development Issue approval | Issue split and execution order, zh/en | Pending capture |
-| `phase-05-acceptance-commit.png` | GitHub stage commit | Stage completion, zh/en | Pending capture |
+| `phase-05-source-inventory-facts.png` | [GitHub acceptance contract](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/10-natural-language-acceptance-contract.md#2-source-inventory) | Source scan and fact ledger, zh/en | Verified 2026-08-25 |
+| `phase-05-test-inventory.png` | [GitHub acceptance contract](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/10-natural-language-acceptance-contract.md#4-classified-test-inventory) | Classified 27-case inventory, zh/en | Verified 2026-08-25 |
+| `phase-05-detailed-save-failure-case.png` | [GitHub acceptance contract](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/10-natural-language-acceptance-contract.md#nlt-d-03-failed-save-preserves-proposal-and-committed-owner) | Representative detailed recovery case, zh/en | Verified 2026-08-25 |
+| `phase-05-coverage-matrix.png` | [GitHub acceptance contract](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/10-natural-language-acceptance-contract.md#6-coverage-matrix) | Fact-to-case coverage matrix, zh/en | Verified 2026-08-25 |
+| `phase-05-issue-1.png` | [GitHub Issue #1](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/1) | Queue/search/filter Acceptance Criteria, zh/en | Verified 2026-08-25 |
+| `phase-05-issue-2.png` | [GitHub Issue #2](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/2) | Detail/permission/recovery Acceptance Criteria, zh/en | Verified 2026-08-25 |
+| `phase-05-issue-3.png` | [GitHub Issue #3](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/3) | Visual/responsive/state Acceptance Criteria, zh/en | Verified 2026-08-25 |
+| `phase-05-acceptance-contract-github.png` | [GitHub acceptance contract](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/10-natural-language-acceptance-contract.md) | Stage 5 contract overview, zh/en | Verified 2026-08-25 |
+| `phase-05-development-issues-github.png` | [GitHub development Issue approval](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/11-acceptance-and-development-issues.md) | Issue split and execution order, zh/en | Verified 2026-08-25 |
+| `phase-05-acceptance-commit.png` | [GitHub stage commit](https://github.com/pfcstyle/agentic-engineering-demo-codex/commit/19b19bf0d80149fcb72d5a4e1f481ba744deacff) | Stage completion, zh/en | Verified 2026-08-25 |
