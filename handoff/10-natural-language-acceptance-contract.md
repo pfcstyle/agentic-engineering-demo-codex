@@ -33,6 +33,7 @@ This is a pre-development acceptance contract. It was generated from approved pr
 | `08-figma-make-hifi-handoff.md` | Prototype evidence | Approved | Version 7 behavior and responsive verification | Simulated local state only |
 | `09-figma-make-hifi-approval.md` | Prototype approval | Approved | Entry condition for this contract | Confirms product contract remains authoritative |
 | Figma Make Version 7 | Interactive prototype evidence | Approved | Observable states, controls, recovery, mobile behavior | Not a production implementation |
+| Figma Make Version 16 | Latest prototype evidence | Unapproved behavior change | Current visual states, default detail-panel treatment, mobile preview | Default desktop panel is collapsed until selection; Status and Response Notes editing conflict with the product contract |
 | Figma Design file | Visual evidence | Approved | Desktop, drawer, states, responsive, tokens | Visual authority only |
 
 ## 3. Fact ledger
@@ -73,6 +74,7 @@ This is a pre-development acceptance contract. It was generated from approved pr
 | F-32 | Meaningful text/UI targets WCAG 2.2 AA and reduced motion is respected. | Product contract | Requires accessibility evaluation |
 | F-33 | The prototype uses deterministic mock data and no real backend. | Product contract | Observable/inspection |
 | F-34 | Status and response-note editing are not authorized by the product contract. | Product contract; resolved source conflict | Observable absence |
+| F-35 | Version 16 renders the desktop queue full width until an incident is selected, then shows the right-side details panel. | Figma Make Version 16 | Observable, but requires product decision before acceptance |
 
 ## 4. Classified test inventory
 
@@ -105,6 +107,7 @@ This is a pre-development acceptance contract. It was generated from approved pr
 | NLT-J-01 | Lead finds an urgent incident, inspects it, and assigns ownership | Cross-functional journey | Critical | F-01–F-16 |
 | NLT-J-02 | Operator recovers from load and save failures without losing intent | Cross-functional journey | Critical | F-15, F-16, F-21, F-22 |
 | NLT-O-01 | Product exposes no unauthorized incident mutation or backend scope | Scope/negative | High | F-33, F-34 |
+| NLT-C-01 | Version 16 default detail-panel behavior awaits product decision | Source conflict | High | F-24, F-35 |
 
 ## 5. Detailed natural-language cases
 
@@ -865,6 +868,34 @@ The product stays within its approved deterministic demonstration boundary.
 
 - None required.
 
+### NLT-C-01: Version 16 default detail-panel behavior awaits product decision
+
+- Category: Source conflict
+- Priority: High — the desktop layout choice changes the expected initial workspace.
+- User goal: Avoid treating a newer prototype layout as approved behavior without an explicit product decision.
+- Source facts: F-24, F-35
+
+#### Preconditions
+
+- The approved product contract and Figma Make Version 16 are both available for review.
+
+#### Steps and expected results
+
+1. Open Version 16 on desktop with no incident selected.
+   - Expected: The queue fills the available workspace and no detail panel is visible.
+2. Compare that result with the approved product contract.
+   - Expected: The difference from the stated desktop right-side drawer requirement is recorded as a conflict, not silently accepted.
+3. Inspect the approved implementation boundary.
+   - Expected: It continues to follow the product contract until a product owner explicitly approves the collapsed-by-default behavior.
+
+#### Final result
+
+Version 16's default-panel treatment is traceable evidence awaiting a product decision; it is not an implementation acceptance criterion.
+
+#### Cleanup
+
+- None required.
+
 ## 6. Coverage matrix
 
 | Case ID | Facts | Role | State | Environment | Category | Priority |
@@ -896,11 +927,12 @@ The product stays within its approved deterministic demonstration boundary.
 | NLT-J-01 | F-01–F-16 | Lead | Primary journey | Desktop/mobile | Sanity | Critical |
 | NLT-J-02 | F-15, F-16, F-21, F-22 | Lead | Recovery journey | Desktop/mobile | Sanity | Critical |
 | NLT-O-01 | F-33, F-34 | Both | All | All | Scope | High |
+| NLT-C-01 | F-24, F-35 | Both | Default desktop | Desktop | Source conflict | High |
 
 ## 7. Coverage summary
 
-- Confirmed facts covered: 34 of 34.
-- Detailed cases: 27.
+- Confirmed facts covered: 34 of 34; one Version 16 prototype-only conflict is recorded separately and is intentionally not accepted.
+- Detailed cases: 28.
 - Intentional overlaps: NLT-J-01 overlaps queue and successful ownership cases for release sanity; NLT-J-02 overlaps focused load/save recovery cases for cross-functional confidence.
 - Deferred dimensions: localization is deferred because no supported locales or translated product copy are defined; browser compatibility is deferred because no supported browser matrix is defined; production persistence and integrations are out of scope.
 
@@ -911,3 +943,4 @@ The product stays within its approved deterministic demonstration boundary.
 - Tablet form: the contract allows either a compact table or structured list and either a widened drawer or overlay. Acceptance is based on information/action preservation, not one exact structure.
 - WCAG evaluation: contrast and reduced-motion cases require dedicated tooling or browser evidence during development/E2E; prototype approval is supporting evidence, not the final production result.
 - Approval recommendation: accept this suite as the behavior contract for the Stage 6 Dev Plan and retain the fact/case IDs in each subsequently created Issue's Acceptance Criteria.
+- Version 16 decision required: confirm whether the desktop detail panel should be collapsed until selection. Until that decision is made, F-24 remains the approved implementation requirement and F-35 remains prototype-only evidence.
