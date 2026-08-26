@@ -91,3 +91,18 @@
 | `phase-05-acceptance-contract-github.png` | [GitHub acceptance contract](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/10-natural-language-acceptance-contract.md) | Stage 5 contract overview, zh/en | Verified 2026-08-25 |
 | `phase-05-development-issues-github.png` | [GitHub development Issue approval](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/11-acceptance-and-development-issues.md) | Issue split and execution order, zh/en | Verified 2026-08-25 |
 | `phase-05-acceptance-commit.png` | [GitHub stage commit](https://github.com/pfcstyle/agentic-engineering-demo-codex/commit/19b19bf0d80149fcb72d5a4e1f481ba744deacff) | Stage completion, zh/en | Verified 2026-08-25 |
+
+## Phase 6 — Issue 1 Queue, Search, and Filters
+
+| File | Source | Tutorial use | Status |
+| --- | --- | --- | --- |
+| `phase-06-issue-1.png` | [GitHub Issue #1](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/1) | Issue scope and Acceptance Criteria, zh/en | Pending final verification |
+| `phase-06-default-queue.png` | Local application in the isolated Issue 1 worktree | Implemented 20-item default queue, zh/en | Pending final verification |
+| `phase-06-search-filters.png` | Local application in the isolated Issue 1 worktree | Search, AND filters, active criteria, and result count, zh/en | Pending final verification |
+| `phase-06-no-results.png` | Local application in the isolated Issue 1 worktree | Filtered No Results recovery state, zh/en | Pending final verification |
+| `phase-06-empty-source.png` | Local application in the isolated Issue 1 worktree | Source-level Empty state distinction, zh/en | Pending final verification |
+| `phase-06-development-record.png` | GitHub Issue 1 development record | Planning and independent verification, zh/en | Pending capture |
+| `phase-06-tests-build.png` | GitHub Issue 1 development record | Focused tests, lint, and production build evidence, zh/en | Pending capture |
+| `phase-06-pr.png` | GitHub Issue 1 pull request | PR scope and checks, zh/en | Pending capture |
+| `phase-06-pr-review.png` | GitHub Issue 1 pull-request review | Independent acceptance review, zh/en | Pending capture |
+| `phase-06-merge.png` | GitHub Issue 1 merged pull request | Merge completion, zh/en | Pending capture |

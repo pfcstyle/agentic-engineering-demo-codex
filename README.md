@@ -2,6 +2,23 @@
 
 This repository is the implementation workspace for the Codex agentic-engineering tutorial. The demo follows an incident operations team as they inspect, filter, and assign incidents from a responsive triage queue.
 
+## Run the queue slice
+
+This stage implements the deterministic queue, search, filters, active criteria, result count, No Results, and Empty Source states with local mock data. Incident details and ownership workflows are intentionally deferred to the next development stage.
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Open the local URL printed by Vite. For verification, run:
+
+```bash
+pnpm test
+pnpm lint
+pnpm build
+```
+
 ## Product analysis
 
 - [Product contract](handoff/01-product-contract.md)
@@ -15,6 +32,7 @@ This repository is the implementation workspace for the Codex agentic-engineerin
 - [Figma Make high-fidelity approval](handoff/09-figma-make-hifi-approval.md)
 - [Natural-language acceptance contract](handoff/10-natural-language-acceptance-contract.md)
 - [Acceptance and development Issue approval](handoff/11-acceptance-and-development-issues.md)
+- [Issue 1 development record](handoff/12-issue-1-development.md)
 - [Tutorial evidence manifest](handoff/evidence-manifest.md)
 
 ## Delivery workflow
