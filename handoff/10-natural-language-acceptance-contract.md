@@ -8,7 +8,7 @@ This is a pre-development acceptance contract. It was generated from approved pr
 
 - Deterministic incident queue, ordering, search, filters, result count, and context preservation.
 - Incident details and Lead/Analyst/Closed permission boundaries.
-- Ownership save progress, success, failure, retry, and committed-value integrity.
+- Owner and Status save progress, success, failure, retry, and committed-value integrity.
 - Loading, loaded, Empty Source, No Results, Load Error, and reset behavior.
 - Desktop, tablet, and mobile transformations.
 - Keyboard operation, focus management, accessible naming, announcements, contrast, non-color cues, and reduced motion.
@@ -17,23 +17,23 @@ This is a pre-development acceptance contract. It was generated from approved pr
 ### Out of scope
 
 - Authentication, user administration, and production authorization.
-- Creating, deleting, closing, or editing incidents beyond assigning an owner to an open incident as an Incident Lead.
-- Editing incident status or response notes.
+- Creating, deleting, closing, or editing incidents beyond assigning an owner or setting Status on an open incident as an Incident Lead.
+- Authoring or editing Response Notes.
 - Comments, chat, notifications, analytics, audit logs, real-time synchronization, production APIs, deployment, customizable columns, or saved views.
 
 ## 2. Source inventory
 
 | Source | Role | Authority | Scope | Conflicts or limits |
 | --- | --- | --- | --- | --- |
-| `01-product-contract.md` | Requirement | Approved | Behavior, permissions, states, responsive, accessibility | Primary behavioral authority |
+| `01-product-contract.md` | Requirement | Approved | Behavior, permissions, states, responsive, accessibility | Primary authority except where the recorded Version 16 acceptance decision explicitly supersedes an interaction |
 | `02-figma-make-plan.md` | Prototype planning evidence | Approved | Deterministic controls and review checklist | Does not override product contract |
 | `04-figma-make-wireframe-approval.md` | Prototype evidence | Approved | Verified wireframe states and representative data | Session persistence boundary is prototype-only |
-| `06-figma-design-handoff.md` | Design evidence | Approved for visual/responsive use | Tokens, hierarchy, state presentation, responsive rules | Mentions editable Status/Response Notes; conflicts with product contract and is excluded |
+| `06-figma-design-handoff.md` | Design evidence | Approved for visual/responsive use | Tokens, hierarchy, state presentation, responsive rules | Response Notes authoring is excluded; Version 16 governs the accepted Owner/Status interaction |
 | `07-figma-design-approval.md` | Design approval | Approved | Visual direction and state recognition | Does not expand mutation permissions |
 | `08-figma-make-hifi-handoff.md` | Prototype evidence | Approved | Version 7 behavior and responsive verification | Simulated local state only |
 | `09-figma-make-hifi-approval.md` | Prototype approval | Approved | Entry condition for this contract | Confirms product contract remains authoritative |
 | Figma Make Version 7 | Interactive prototype evidence | Approved | Observable states, controls, recovery, mobile behavior | Not a production implementation |
-| Figma Make Version 16 | Latest prototype evidence | Unapproved behavior change | Current visual states, default detail-panel treatment, mobile preview | Default desktop panel is collapsed until selection; Status and Response Notes editing conflict with the product contract |
+| Figma Make Version 16 | Latest prototype evidence | Accepted interaction authority by user decision (2026-08-26) | Current queue/detail interaction, Owner/Status save, states, and mobile preview | Supersedes prior interaction conflicts in this acceptance contract; Response Notes is observed as display-only |
 | Figma Design file | Visual evidence | Approved | Desktop, drawer, states, responsive, tokens | Visual authority only |
 
 ## 3. Fact ledger
@@ -51,19 +51,19 @@ This is a pre-development acceptance contract. It was generated from approved pr
 | F-09 | Opening details preserves search, filters, result count, and queue context. | Product contract | Observable |
 | F-10 | Closing details restores focus to the originating row or card. | Product contract | Observable |
 | F-11 | Details show complete incident context, status, timestamps, team, owner, and summary. | Product contract | Observable |
-| F-12 | Lead may assign/reassign the owner of an open incident. | Product contract | Observable |
-| F-13 | A successful save updates the drawer and queue row for the current session. | Product contract | Observable |
-| F-14 | Saving has idle, in-progress, success, and failure states; duplicate action is blocked in progress. | Product contract | Observable |
-| F-15 | Failed save keeps the drawer open, preserves the proposal, changes no committed owner, explains failure, and offers Retry. | Product contract | Observable |
-| F-16 | Retry uses the preserved proposal and commits only after success. | High-fidelity handoff Version 7 | Observable |
-| F-17 | Analyst ownership is read-only with an explanation. | Product contract | Observable |
-| F-18 | Closed incidents are read-only for both roles with an explanation. | Product contract | Observable |
+| F-12 | Lead may assign/reassign the owner of an open incident. | Product contract; Figma Make Version 16 | Observable |
+| F-13 | A successful Owner or Status save updates the drawer and queue row for the current session. | Product contract; Figma Make Version 16 acceptance decision | Observable |
+| F-14 | Saving Owner or Status has idle, in-progress, success, and failure states; duplicate action is blocked in progress. | Product contract; Figma Make Version 16 acceptance decision | Observable |
+| F-15 | Failed save keeps the drawer open, preserves the proposed Owner and/or Status, changes no committed value, explains failure, and offers Retry. | Product contract; Figma Make Version 16 acceptance decision | Observable |
+| F-16 | Retry uses preserved editable proposals and commits only after success. | High-fidelity handoff Version 7; Figma Make Version 16 acceptance decision | Observable |
+| F-17 | Analyst Owner and Status controls are read-only with an explanation. | Product contract; Figma Make Version 16 acceptance decision | Observable |
+| F-18 | Closed incidents are read-only for both roles with an explanation. | Product contract; Figma Make Version 16 | Observable |
 | F-19 | Loading is visually and programmatically identifiable and announced. | Product contract | Observable |
 | F-20 | Empty Source explains that no source incidents exist. | Product contract | Observable |
 | F-21 | Load Error retains the workspace and exposes Retry. | Product contract | Observable |
 | F-22 | Load Retry visibly enters loading, then restores deterministic success while retaining active criteria. | Make plan and wireframe approval | Observable |
 | F-23 | Reset restores Lead, Normal, Success, no criteria, no selected incident, and default queue. | Make plan and wireframe approval | Observable |
-| F-24 | Desktop at 1200 px+ uses the full table and right-side detail drawer. | Product contract | Observable |
+| F-24 | Desktop at 1200 px+ starts with a full-width table; selecting an incident opens the right-side detail drawer. | Figma Make Version 16 acceptance decision | Observable |
 | F-25 | Tablet at 768–1199 px retains readable queue information and uses a readable drawer/overlay without horizontal page scrolling. | Product contract; Design handoff | Observable |
 | F-26 | Mobile below 768 px uses cards and a full-height detail sheet while retaining required information/actions. | Product contract | Observable |
 | F-27 | All interactive behavior is keyboard-operable with visible focus. | Product contract | Observable |
@@ -73,8 +73,9 @@ This is a pre-development acceptance contract. It was generated from approved pr
 | F-31 | Severity, status, permissions, and errors use text/non-color cues. | Product contract | Observable |
 | F-32 | Meaningful text/UI targets WCAG 2.2 AA and reduced motion is respected. | Product contract | Requires accessibility evaluation |
 | F-33 | The prototype uses deterministic mock data and no real backend. | Product contract | Observable/inspection |
-| F-34 | Status and response-note editing are not authorized by the product contract. | Product contract; resolved source conflict | Observable absence |
-| F-35 | Version 16 renders the desktop queue full width until an incident is selected, then shows the right-side details panel. | Figma Make Version 16 | Observable, but requires product decision before acceptance |
+| F-34 | Response Notes remain displayed incident context; Version 16 exposes no Response Notes authoring control. | Figma Make Version 16 | Observable absence |
+| F-35 | The user accepted Version 16's default desktop behavior: full-width queue until selection, then a right-side details panel. | User decision (2026-08-26); Figma Make Version 16 | Observable |
+| F-36 | An Incident Lead can choose Status as well as Owner for an open incident and save the change; the current-session drawer and queue reflect a successful save. | User decision (2026-08-26); Figma Make Version 16 | Observable |
 
 ## 4. Classified test inventory
 
@@ -87,17 +88,18 @@ This is a pre-development acceptance contract. It was generated from approved pr
 | NLT-Q-05 | No Results preserves controls and differs from Empty Source | State/negative | High | F-08, F-20 |
 | NLT-Q-06 | Detail inspection preserves queue context and focus | State/context | Critical | F-09, F-10 |
 | NLT-D-01 | Lead successfully assigns an open incident owner | Primary flow | Critical | F-12, F-13 |
+| NLT-D-08 | Lead successfully changes an open incident Status | Primary flow | Critical | F-13, F-36 |
 | NLT-D-02 | In-progress save prevents duplicate submission | Data integrity | Critical | F-14 |
-| NLT-D-03 | Failed save preserves proposal and committed owner | Error recovery | Critical | F-15 |
-| NLT-D-04 | Retry commits the preserved proposal only after success | Error recovery | Critical | F-16 |
-| NLT-D-05 | Analyst can inspect but cannot mutate ownership | Permission | Critical | F-17 |
+| NLT-D-03 | Failed save preserves proposals and committed values | Error recovery | Critical | F-15 |
+| NLT-D-04 | Retry commits preserved proposals only after success | Error recovery | Critical | F-16 |
+| NLT-D-05 | Analyst can inspect but cannot mutate Owner or Status | Permission | Critical | F-17 |
 | NLT-D-06 | Closed incidents are read-only for both roles | Permission | Critical | F-18 |
-| NLT-D-07 | Drawer exposes complete incident context without extra edit scope | Functional/scope | High | F-11, F-34 |
+| NLT-D-07 | Drawer exposes complete context with only approved edits | Functional/scope | High | F-11, F-34, F-36 |
 | NLT-S-01 | Loading state is identifiable and announced | Loading/accessibility | High | F-19, F-30 |
 | NLT-S-02 | Empty Source communicates a source-data condition | Empty state | High | F-20 |
 | NLT-S-03 | Load Error retains workspace and recovers deterministically | Error recovery | Critical | F-21, F-22 |
 | NLT-S-04 | Reset restores the complete deterministic baseline | Lifecycle | High | F-23 |
-| NLT-R-01 | Desktop retains dense table and right drawer | Responsive | High | F-24 |
+| NLT-R-01 | Desktop opens the right drawer only after incident selection | Responsive | High | F-24, F-35 |
 | NLT-R-02 | Tablet preserves information without page-level horizontal scrolling | Responsive | High | F-25 |
 | NLT-R-03 | Mobile queue uses complete, actionable cards | Responsive | Critical | F-26 |
 | NLT-R-04 | Mobile details use an accessible full-height modal sheet | Responsive/accessibility | Critical | F-26, F-28 |
@@ -106,8 +108,7 @@ This is a pre-development acceptance contract. It was generated from approved pr
 | NLT-A-03 | Focus, contrast, non-color cues, and reduced motion meet the visual contract | Accessibility/visual | High | F-31, F-32 |
 | NLT-J-01 | Lead finds an urgent incident, inspects it, and assigns ownership | Cross-functional journey | Critical | F-01–F-16 |
 | NLT-J-02 | Operator recovers from load and save failures without losing intent | Cross-functional journey | Critical | F-15, F-16, F-21, F-22 |
-| NLT-O-01 | Product exposes no unauthorized incident mutation or backend scope | Scope/negative | High | F-33, F-34 |
-| NLT-C-01 | Version 16 default detail-panel behavior awaits product decision | Source conflict | High | F-24, F-35 |
+| NLT-O-01 | Product exposes no unauthorized incident mutation or backend scope | Scope/negative | High | F-33, F-34, F-36 |
 
 ## 5. Detailed natural-language cases
 
@@ -325,12 +326,12 @@ An authorized Lead can commit a new owner consistently in details and queue.
 
 - Category: Data integrity
 - Priority: Critical — duplicate mutation attempts can corrupt state.
-- User goal: Submit one ownership change even when the operation is still pending.
+- User goal: Submit one authorized Owner or Status change even when the operation is still pending.
 - Source facts: F-14
 
 #### Preconditions
 
-- Role is Incident Lead; an open incident has an unsaved owner proposal.
+- Role is Incident Lead; an open incident has an unsaved Owner or Status proposal.
 
 #### Steps and expected results
 
@@ -347,26 +348,26 @@ Pending state prevents duplicate save requests.
 
 - Wait for completion and reset.
 
-### NLT-D-03: Failed save preserves proposal and committed owner
+### NLT-D-03: Failed save preserves proposals and committed values
 
 - Category: Error recovery
-- Priority: Critical — a failure must not create false ownership.
+- Priority: Critical — a failure must not create a false committed Owner or Status.
 - User goal: Retain the intended edit while clearly preserving committed data.
 - Source facts: F-15
 
 #### Preconditions
 
 - Role is Incident Lead; save outcome is Failure.
-- An open incident with a known committed owner is selected.
+- An open incident with known committed Owner and Status values is selected.
 
 #### Steps and expected results
 
-1. Select a different proposed owner and save.
+1. Select a different proposed Owner and/or Status and save.
    - Expected: The drawer stays open; a clear failure alert appears and Retry is available.
-2. Review the owner field.
-   - Expected: The proposed owner remains selected.
+2. Review the editable fields.
+   - Expected: Every proposed Owner/Status value remains selected.
 3. Review the corresponding queue row.
-   - Expected: The committed owner has not changed.
+   - Expected: The committed Owner and Status have not changed.
 
 #### Final result
 
@@ -376,11 +377,11 @@ A failed save preserves user intent without corrupting committed queue data.
 
 - Reset or continue with NLT-D-04.
 
-### NLT-D-04: Retry commits the preserved proposal only after success
+### NLT-D-04: Retry commits preserved proposals only after success
 
 - Category: Error recovery
 - Priority: Critical — the recovery path was historically fragile in the prototype.
-- User goal: Retry the same intended owner and commit it after recovery.
+- User goal: Retry the same intended Owner and/or Status update and commit it after recovery.
 - Source facts: F-16
 
 #### Preconditions
@@ -389,12 +390,12 @@ A failed save preserves user intent without corrupting committed queue data.
 
 #### Steps and expected results
 
-1. Change the simulated save outcome to Success without changing the proposed owner.
-   - Expected: Failure state and proposed owner remain present until Retry.
+1. Change the simulated save outcome to Success without changing the proposed values.
+   - Expected: Failure state and proposed Owner/Status remain present until Retry.
 2. Activate Retry.
    - Expected: Saving is shown, followed by visible and announced success.
 3. Review the queue row and drawer.
-   - Expected: Both now show the preserved proposed owner as committed.
+   - Expected: Both now show the preserved proposed values as committed.
 
 #### Final result
 
@@ -404,7 +405,7 @@ Retry reuses the preserved proposal and commits exactly once after success.
 
 - Reset to defaults.
 
-### NLT-D-05: Analyst can inspect but cannot mutate ownership
+### NLT-D-05: Analyst can inspect but cannot mutate Owner or Status
 
 - Category: Permission
 - Priority: Critical — role boundaries must prevent unauthorized mutation.
@@ -419,14 +420,14 @@ Retry reuses the preserved proposal and commits exactly once after success.
 
 1. Review the incident details.
    - Expected: Current owner and incident context are visible.
-2. Inspect the ownership area.
-   - Expected: No owner mutation or save action is available; a concise Lead-role permission explanation is visible.
+2. Inspect the Owner and Status areas.
+   - Expected: No Owner/Status mutation or save action is available; a concise Lead-role permission explanation is visible.
 3. Use keyboard navigation through the drawer/sheet.
-   - Expected: No hidden editable owner control becomes reachable.
+   - Expected: No hidden editable Owner or Status control becomes reachable.
 
 #### Final result
 
-Analysts retain inspection access but cannot assign or reassign ownership.
+Analysts retain inspection access but cannot assign/reassign Owner or change Status.
 
 #### Cleanup
 
@@ -446,7 +447,7 @@ Analysts retain inspection access but cannot assign or reassign ownership.
 #### Steps and expected results
 
 1. As Incident Lead, open the Closed incident.
-   - Expected: Context and owner are visible; mutation controls are unavailable and a Closed read-only explanation is visible.
+   - Expected: Context, Owner, and Status are visible; mutation controls are unavailable and a Closed read-only explanation is visible.
 2. Switch to Incident Analyst while the same incident is selected.
    - Expected: The incident remains read-only with no mutation action.
 
@@ -458,12 +459,12 @@ Closed incidents cannot be modified by either role.
 
 - Reset to defaults.
 
-### NLT-D-07: Drawer exposes complete context without extra edit scope
+### NLT-D-07: Drawer exposes complete context with only approved edits
 
 - Category: Functional and scope
-- Priority: High — design artifacts must not accidentally expand the product contract.
-- User goal: Understand an incident without exposing unsupported actions.
-- Source facts: F-11, F-34
+- Priority: High — design artifacts must not accidentally expand the accepted interaction scope.
+- User goal: Understand an incident and distinguish approved edits from display-only context.
+- Source facts: F-11, F-34, F-36
 
 #### Preconditions
 
@@ -474,15 +475,44 @@ Closed incidents cannot be modified by either role.
 1. Review details.
    - Expected: ID/title, severity, status, service, team, created/updated timestamps, owner, and operational summary are available.
 2. Review available mutation controls as an authorized Lead on an open incident.
-   - Expected: Owner assignment is the only incident mutation; status and response notes are not editable.
+   - Expected: Owner and Status are editable and use the shared Save action; Response Notes is display-only with no authoring control.
 
 #### Final result
 
-Details provide complete context without expanding the approved mutation scope.
+Details provide complete context with only the approved Owner/Status mutation scope.
 
 #### Cleanup
 
 - Close details.
+
+### NLT-D-08: Lead successfully changes an open incident Status
+
+- Category: Primary flow
+- Priority: Critical — Version 16 makes Status an approved triage decision for an open incident.
+- User goal: Commit a changed Status without losing the queue context.
+- Source facts: F-13, F-36
+
+#### Preconditions
+
+- Role is Incident Lead; save outcome is Success.
+- An open incident is selected and its current Status is known.
+
+#### Steps and expected results
+
+1. Choose a different Status in the Select incident status control.
+   - Expected: The proposal is visible and Save Changes becomes available.
+2. Activate Save Changes.
+   - Expected: An in-progress state appears, followed by visible and announced success.
+3. Review the drawer and queue row.
+   - Expected: Both show the newly committed Status for the current session.
+
+#### Final result
+
+An authorized Lead can commit a Status change consistently in details and queue.
+
+#### Cleanup
+
+- Reset the demo or restore the original Status.
 
 ### NLT-S-01: Loading state is identifiable and announced
 
@@ -592,12 +622,12 @@ Reset produces a reproducible baseline for subsequent cases.
 
 - None required.
 
-### NLT-R-01: Desktop retains dense table and right drawer
+### NLT-R-01: Desktop opens the right drawer only after incident selection
 
 - Category: Responsive
 - Priority: High — desktop is the primary operations workspace.
-- User goal: Triage and inspect incidents without losing full queue context.
-- Source facts: F-24
+- User goal: Start with a broad queue scan, then inspect an incident without losing queue context.
+- Source facts: F-24, F-35
 
 #### Preconditions
 
@@ -606,9 +636,11 @@ Reset produces a reproducible baseline for subsequent cases.
 #### Steps and expected results
 
 1. Load the default queue.
-   - Expected: Full table columns, search, filters, role, and count are visible without page-level horizontal scrolling.
+   - Expected: The queue occupies the available desktop workspace; full table columns, search, filters, role, and count are visible without page-level horizontal scrolling; no detail panel is shown.
 2. Open an incident.
    - Expected: Details appear in a right-side drawer while the queue remains visible.
+3. Close the drawer.
+   - Expected: The detail panel is removed and the queue again occupies the available workspace; focus returns to the originating row.
 
 #### Final result
 
@@ -676,7 +708,7 @@ Mobile cards preserve the information and action needed to choose an incident.
 
 - Category: Responsive and accessibility
 - Priority: Critical — mobile detail behavior affects navigation and focus.
-- User goal: Inspect and, when authorized, assign ownership in a mobile detail surface.
+- User goal: Inspect and, when authorized, change Owner or Status in a mobile detail surface.
 - Source facts: F-26, F-28
 
 #### Preconditions
@@ -688,7 +720,7 @@ Mobile cards preserve the information and action needed to choose an incident.
 1. Activate an open incident card.
    - Expected: A full-height, titled modal detail sheet opens and initial focus moves inside it.
 2. Navigate through the sheet.
-   - Expected: Required context and authorized owner controls are reachable; focus remains contained while modal.
+   - Expected: Required context and authorized Owner/Status controls are reachable; focus remains contained while modal.
 3. Close with the sticky close/back action or keyboard close action.
    - Expected: The sheet closes and focus returns to the originating card.
 
@@ -741,7 +773,7 @@ The complete inspection journey is keyboard-operable with visible, predictable f
 
 #### Steps and expected results
 
-1. Inspect search, filters, rows/cards, drawer/sheet, owner field, Save, Retry, and close actions.
+1. Inspect search, filters, rows/cards, drawer/sheet, Owner and Status fields, Save, Retry, and close actions.
    - Expected: Each exposes a persistent, meaningful accessible name and correct state.
 2. Trigger a count change, loading, save success, save failure, and load error.
    - Expected: Each outcome is announced without unexpected focus movement.
@@ -829,8 +861,8 @@ An Incident Lead can complete the primary triage-to-ownership journey with conte
 
 1. Apply criteria, trigger Load Error, and retry.
    - Expected: Loading precedes restored Normal data and the criteria remain applied.
-2. Open an authorized incident, propose an owner, and trigger Save Failure.
-   - Expected: Proposal and intent remain; committed queue data does not change; alert and Retry are visible.
+2. Open an authorized incident, propose an Owner and/or Status update, and trigger Save Failure.
+   - Expected: Proposals and intent remain; committed queue data does not change; alert and Retry are visible.
 3. Change only the outcome to Success and retry.
    - Expected: The preserved proposal is committed and announced.
 
@@ -846,8 +878,8 @@ Both recovery paths preserve user intent and prevent false committed state.
 
 - Category: Scope and negative behavior
 - Priority: High — implementation must remain a focused deterministic demo.
-- User goal: Use only the approved triage and owner-assignment capabilities.
-- Source facts: F-33, F-34
+- User goal: Use only the approved triage, Owner-assignment, and Status-update capabilities.
+- Source facts: F-33, F-34, F-36
 
 #### Preconditions
 
@@ -856,41 +888,13 @@ Both recovery paths preserve user intent and prevent false committed state.
 #### Steps and expected results
 
 1. Inspect available incident actions.
-   - Expected: There are no create, delete, close, status-edit, response-note-edit, comment, chat, notification, analytics, authentication, or saved-view actions.
+   - Expected: Apart from Lead-only Owner and Status edits on open incidents, there are no create, delete, close, Response Notes authoring, comment, chat, notification, analytics, authentication, or saved-view actions.
 2. Exercise loading and saving.
    - Expected: Behavior is reproducible from deterministic mock controls and requires no production service or credential.
 
 #### Final result
 
 The product stays within its approved deterministic demonstration boundary.
-
-#### Cleanup
-
-- None required.
-
-### NLT-C-01: Version 16 default detail-panel behavior awaits product decision
-
-- Category: Source conflict
-- Priority: High — the desktop layout choice changes the expected initial workspace.
-- User goal: Avoid treating a newer prototype layout as approved behavior without an explicit product decision.
-- Source facts: F-24, F-35
-
-#### Preconditions
-
-- The approved product contract and Figma Make Version 16 are both available for review.
-
-#### Steps and expected results
-
-1. Open Version 16 on desktop with no incident selected.
-   - Expected: The queue fills the available workspace and no detail panel is visible.
-2. Compare that result with the approved product contract.
-   - Expected: The difference from the stated desktop right-side drawer requirement is recorded as a conflict, not silently accepted.
-3. Inspect the approved implementation boundary.
-   - Expected: It continues to follow the product contract until a product owner explicitly approves the collapsed-by-default behavior.
-
-#### Final result
-
-Version 16's default-panel treatment is traceable evidence awaiting a product decision; it is not an implementation acceptance criterion.
 
 #### Cleanup
 
@@ -907,17 +911,18 @@ Version 16's default-panel treatment is traceable evidence awaiting a product de
 | NLT-Q-05 | F-08, F-20 | Both | No Results/Empty | Responsive | State | High |
 | NLT-Q-06 | F-09, F-10 | Both | Detail open/closed | Desktop/mobile | Context/focus | Critical |
 | NLT-D-01 | F-12, F-13 | Lead | Save success | Desktop/mobile | Mutation | Critical |
+| NLT-D-08 | F-13, F-36 | Lead | Save success | Desktop/mobile | Mutation | Critical |
 | NLT-D-02 | F-14 | Lead | Saving | Desktop/mobile | Integrity | Critical |
 | NLT-D-03 | F-15 | Lead | Save failure | Desktop/mobile | Recovery | Critical |
 | NLT-D-04 | F-16 | Lead | Retry success | Desktop/mobile | Recovery | Critical |
 | NLT-D-05 | F-17 | Analyst | Read-only | Desktop/mobile | Permission | Critical |
 | NLT-D-06 | F-18 | Both | Closed | Desktop/mobile | Permission | Critical |
-| NLT-D-07 | F-11, F-34 | Both | Detail | Responsive | Scope | High |
+| NLT-D-07 | F-11, F-34, F-36 | Both | Detail | Responsive | Scope | High |
 | NLT-S-01 | F-19, F-30 | Both | Loading | Responsive | Accessibility | High |
 | NLT-S-02 | F-20 | Both | Empty | Responsive | State | High |
 | NLT-S-03 | F-21, F-22 | Both | Load error/retry | Responsive | Recovery | Critical |
 | NLT-S-04 | F-23 | Both | Reset | Responsive | Lifecycle | High |
-| NLT-R-01 | F-24 | Both | Loaded/detail | Desktop | Responsive | High |
+| NLT-R-01 | F-24, F-35 | Both | Loaded/detail | Desktop | Responsive | High |
 | NLT-R-02 | F-25 | Both | Loaded/detail | Tablet | Responsive | High |
 | NLT-R-03 | F-26 | Both | Loaded | Mobile | Responsive | Critical |
 | NLT-R-04 | F-26, F-28 | Lead | Detail | Mobile | Responsive/a11y | Critical |
@@ -926,21 +931,20 @@ Version 16's default-panel treatment is traceable evidence awaiting a product de
 | NLT-A-03 | F-31, F-32 | Both | Visual states | Desktop/mobile | Visual/a11y | High |
 | NLT-J-01 | F-01–F-16 | Lead | Primary journey | Desktop/mobile | Sanity | Critical |
 | NLT-J-02 | F-15, F-16, F-21, F-22 | Lead | Recovery journey | Desktop/mobile | Sanity | Critical |
-| NLT-O-01 | F-33, F-34 | Both | All | All | Scope | High |
-| NLT-C-01 | F-24, F-35 | Both | Default desktop | Desktop | Source conflict | High |
+| NLT-O-01 | F-33, F-34, F-36 | Both | All | All | Scope | High |
 
 ## 7. Coverage summary
 
-- Confirmed facts covered: 34 of 34; one Version 16 prototype-only conflict is recorded separately and is intentionally not accepted.
+- Confirmed facts covered: 36 of 36, including the recorded Version 16 interaction decision.
 - Detailed cases: 28.
 - Intentional overlaps: NLT-J-01 overlaps queue and successful ownership cases for release sanity; NLT-J-02 overlaps focused load/save recovery cases for cross-functional confidence.
 - Deferred dimensions: localization is deferred because no supported locales or translated product copy are defined; browser compatibility is deferred because no supported browser matrix is defined; production persistence and integrations are out of scope.
 
 ## 8. Gaps, conflicts, assumptions, and approval decisions
 
-- Resolved source conflict: the Figma Design handoff's editable Status and Response Notes are not accepted requirements. Only Owner mutation for an open incident by a Lead is in scope.
+- Version 16 acceptance decision (2026-08-26): this contract adopts the collapsed-by-default desktop drawer and Lead-only Owner/Status editing for open incidents. This decision governs acceptance interactions only; implementation is intentionally unchanged in this update.
+- Response Notes boundary: Version 16 exposes Response Notes as display-only context. No authoring control was observed, so Response Notes editing remains out of scope.
 - Persistence boundary: acceptance requires drawer and queue consistency for the current session. Cross-session and production persistence are explicitly out of scope. Reload persistence remains a product-owner clarification and is not used as an implementation gate in this phase.
 - Tablet form: the contract allows either a compact table or structured list and either a widened drawer or overlay. Acceptance is based on information/action preservation, not one exact structure.
 - WCAG evaluation: contrast and reduced-motion cases require dedicated tooling or browser evidence during development/E2E; prototype approval is supporting evidence, not the final production result.
-- Approval recommendation: accept this suite as the behavior contract for the Stage 6 Dev Plan and retain the fact/case IDs in each subsequently created Issue's Acceptance Criteria.
-- Version 16 decision required: confirm whether the desktop detail panel should be collapsed until selection. Until that decision is made, F-24 remains the approved implementation requirement and F-35 remains prototype-only evidence.
+- Approval recommendation: use this suite as the current behavior contract for the next implementation-correction plan and retain the fact/case IDs in each Issue's Acceptance Criteria.

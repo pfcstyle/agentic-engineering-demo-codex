@@ -62,7 +62,7 @@
 | `phase-04-design-context-attached.png` | Figma Make | Approved Design context attachment, zh/en | Verified |
 | `phase-04-make-agent-implementation.png` | Figma Make Agent | High-fidelity generation result, zh/en | Verified |
 | `phase-04-v16-default-queue.png` | Figma Make Version 16 | Current default desktop queue, zh/en | Verified 2026-08-26 |
-| `phase-04-v16-lead-drawer.png` | Figma Make Version 16 | Lead detail drawer; Status/Response Notes are recorded as unapproved drift, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-lead-drawer.png` | Figma Make Version 16 | Lead detail drawer; Owner and Status controls are accepted, Response Notes is display-only, zh/en | Verified 2026-08-26 |
 | `phase-04-v16-analyst-readonly.png` | Figma Make Version 16 | Analyst read-only permission, zh/en | Verified 2026-08-26 |
 | `phase-04-v16-closed-readonly.png` | Figma Make Version 16 | Closed read-only permission, zh/en | Verified 2026-08-26 |
 | `phase-04-v16-no-results.png` | Figma Make Version 16 | No Results recovery, zh/en | Verified 2026-08-26 |
