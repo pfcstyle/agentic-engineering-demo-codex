@@ -30,4 +30,4 @@ The approved artifact is Figma Make Version 7, generated and iterated in Figma M
 
 ## Next stage
 
-Generate the natural-language acceptance contract from the product contract, approved Figma Design handoff, and this verified high-fidelity prototype. Then create the three development Issues with traceable Acceptance Criteria.
+Generate the natural-language acceptance contract from the product contract, approved Figma Design handoff, and this verified high-fidelity prototype. Stage 6 will then verify the implementation inputs, write the Dev Plan, and create traceable development Issues.

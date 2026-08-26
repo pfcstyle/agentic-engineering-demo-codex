@@ -910,4 +910,4 @@ The product stays within its approved deterministic demonstration boundary.
 - Persistence boundary: acceptance requires drawer and queue consistency for the current session. Cross-session and production persistence are explicitly out of scope. Reload persistence remains a product-owner clarification and is not used as an implementation gate in this phase.
 - Tablet form: the contract allows either a compact table or structured list and either a widened drawer or overlay. Acceptance is based on information/action preservation, not one exact structure.
 - WCAG evaluation: contrast and reduced-motion cases require dedicated tooling or browser evidence during development/E2E; prototype approval is supporting evidence, not the final production result.
-- Approval recommendation: accept this suite as the behavior contract for Issues 1–3 and retain the fact/case IDs in each Issue's Acceptance Criteria.
+- Approval recommendation: accept this suite as the behavior contract for the Stage 6 Dev Plan and retain the fact/case IDs in each subsequently created Issue's Acceptance Criteria.
