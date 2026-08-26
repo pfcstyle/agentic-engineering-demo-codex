@@ -86,3 +86,12 @@
 | `phase-05-detailed-save-failure-case.png` | [GitHub acceptance contract](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/10-natural-language-acceptance-contract.md#nlt-d-03-failed-save-preserves-proposal-and-committed-owner) | Representative detailed recovery case, zh/en | Verified 2026-08-25 |
 | `phase-05-coverage-matrix.png` | [GitHub acceptance contract](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/10-natural-language-acceptance-contract.md#6-coverage-matrix) | Fact-to-case coverage matrix, zh/en | Verified 2026-08-25 |
 | `phase-05-acceptance-contract-github.png` | [GitHub acceptance contract](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/10-natural-language-acceptance-contract.md) | Stage 5 contract overview, zh/en | Verified 2026-08-25 |
+
+## Phase 6 — Development and Design Integration
+
+| File | Source | Tutorial use | Status |
+| --- | --- | --- | --- |
+| Pending capture | [Stage 6 Dev Plan](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/11-stage-6-development-plan.md) | Input mapping, zh/en | Verified 2026-08-26 |
+| Pending capture | [Issue #5](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/5), [PR #9](https://github.com/pfcstyle/agentic-engineering-demo-codex/pull/9) | Queue foundation, review and merge, zh/en | Verified 2026-08-26 |
+| Pending capture | [Issue #6](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/6), [PR #10](https://github.com/pfcstyle/agentic-engineering-demo-codex/pull/10) | Drawer, permissions and recovery, zh/en | Verified 2026-08-26 |
+| Pending capture | [Issue #7](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/7), [PR #11](https://github.com/pfcstyle/agentic-engineering-demo-codex/pull/11) | Approved responsive design integration, zh/en | Verified 2026-08-26 |

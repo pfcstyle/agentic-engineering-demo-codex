@@ -18,3 +18,7 @@ Each Issue cites the Dev Plan and natural-language case identifiers, has explici
 - The product contract prohibits Status and Response Notes mutation, even though those controls appear in one design-handoff frame.
 - Implementers must reread the associated Figma Make source and Figma Design context before writing their Issue scope.
 - The first style-divergent PR was closed and discarded; it supplies no reusable code or tutorial evidence.
+
+## Completion
+
+All three approved Issues were independently reviewed, merged into `develop`, and closed on 2026-08-26: [#5 / PR #9](https://github.com/pfcstyle/agentic-engineering-demo-codex/pull/9), [#6 / PR #10](https://github.com/pfcstyle/agentic-engineering-demo-codex/pull/10), and [#7 / PR #11](https://github.com/pfcstyle/agentic-engineering-demo-codex/pull/11). The final gates were 7 Vitest tests, lint, production build, and 4 Playwright scenarios.
