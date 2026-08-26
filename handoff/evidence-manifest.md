@@ -61,18 +61,18 @@
 | --- | --- | --- | --- |
 | `phase-04-design-context-attached.png` | Figma Make | Approved Design context attachment, zh/en | Verified |
 | `phase-04-make-agent-implementation.png` | Figma Make Agent | High-fidelity generation result, zh/en | Verified |
-| `phase-04-hifi-default.png` | Figma Make Version 5 | High-fidelity default queue, zh/en | Verified |
-| `phase-04-hifi-lead-drawer.png` | Figma Make Version 5 | Lead editable drawer, zh/en | Verified |
-| `phase-04-hifi-analyst-readonly.png` | Figma Make Version 5 | Analyst read-only permission, zh/en | Verified |
-| `phase-04-hifi-closed-readonly.png` | Figma Make Version 5 | Closed read-only permission, zh/en | Verified |
-| `phase-04-hifi-no-results.png` | Figma Make Version 5 | No Results recovery, zh/en | Verified |
-| `phase-04-hifi-loading.png` | Figma Make Version 5 | Loading state, zh/en | Verified |
-| `phase-04-hifi-empty-source.png` | Figma Make Version 5 | Empty Source state, zh/en | Verified |
-| `phase-04-hifi-load-error.png` | Figma Make Version 5 | Load Error and Retry, zh/en | Verified |
-| `phase-04-hifi-save-failure.png` | Figma Make Version 7 | Durable Save Failure and Retry, zh/en | Verified |
-| `phase-04-hifi-save-retry-success.png` | Figma Make Version 7 | Successful retry and committed owner, zh/en | Verified |
-| `phase-04-hifi-mobile-queue.png` | Figma Make Version 7, iPhone device preview | Mobile queue cards, zh/en | Verified |
-| `phase-04-hifi-mobile-detail.png` | Figma Make Version 7, iPhone device preview | Mobile detail sheet, zh/en | Verified |
+| `phase-04-v16-default-queue.png` | Figma Make Version 16 | Current default desktop queue, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-lead-drawer.png` | Figma Make Version 16 | Lead detail drawer; Owner and Status controls are accepted, Response Notes is display-only, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-analyst-readonly.png` | Figma Make Version 16 | Analyst read-only permission, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-closed-readonly.png` | Figma Make Version 16 | Closed read-only permission, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-no-results.png` | Figma Make Version 16 | No Results recovery, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-loading.png` | Figma Make Version 16 | Loading state, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-empty-source.png` | Figma Make Version 16 | Empty Source state, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-load-error.png` | Figma Make Version 16 | Load Error and Retry entry state, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-save-failure.png` | Figma Make Version 16 | Save failure state, zh/en | Verified 2026-08-26 |
+| `phase-04-hifi-save-retry-success.png` | Figma Make Version 7 (historical) | Retained only until a Version 16 retry-success capture is available, zh/en | Historical — not current evidence |
+| `phase-04-v16-mobile-queue.png` | Figma Make Version 16, iPhone device preview | Mobile queue cards, zh/en | Verified 2026-08-26 |
+| `phase-04-v16-mobile-detail.png` | Figma Make Version 16, iPhone device preview | Mobile detail sheet, zh/en | Verified 2026-08-26 |
 | `phase-04-hifi-handoff-github.png` | [GitHub high-fidelity handoff](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/08-figma-make-hifi-handoff.md) | Stage 4 handoff, zh/en | Verified |
 | `phase-04-hifi-approval-github.png` | [GitHub approval record](https://github.com/pfcstyle/agentic-engineering-demo-codex/blob/develop/handoff/09-figma-make-hifi-approval.md) | Stage 4 approval, zh/en | Verified |
 | `phase-04-hifi-approval-commit.png` | [GitHub commit `36e9000`](https://github.com/pfcstyle/agentic-engineering-demo-codex/commit/36e9000) | Stage completion, zh/en | Verified |
