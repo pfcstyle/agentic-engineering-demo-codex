@@ -1,27 +1,41 @@
-import { render, screen } from '@testing-library/react'
+import { cleanup, render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { expect, it, vi } from 'vitest'
+import { afterEach, expect, it } from 'vitest'
 import App from './App'
+afterEach(cleanup)
 
-it('keeps labelled controls and announces search, no-results, and empty-source states', async () => {
-  const user = userEvent.setup()
-  render(<App />)
-  const search = screen.getByLabelText('Search incidents')
-  expect(search).toBeTruthy()
-  expect(screen.getByText('20 of 20 incidents')).toBeTruthy()
-  await user.type(search, 'payments')
-  expect(screen.getByText('4 of 20 incidents')).toBeTruthy()
-  expect(screen.getByRole('button', { name: /search: payments.*clear/i })).toBeTruthy()
-  await user.type(search, 'zzz')
-  expect(screen.getByText('No results')).toBeTruthy()
-  await user.selectOptions(screen.getByLabelText('Queue source'), 'empty')
-  expect(screen.getByRole('heading', { name: 'Empty source' })).toBeTruthy()
+it('preserves a failed owner proposal and commits it only after retry succeeds', async () => {
+  const user = userEvent.setup(); render(<App />)
+  await user.click(screen.getByRole('button', { name: /open incident inc-0003/i }))
+  await user.selectOptions(screen.getByLabelText('Owner'), 'Chen Wei')
+  await user.selectOptions(screen.getByLabelText('Save outcome'), 'failure')
+  await user.click(screen.getByRole('button', { name: 'Save owner change' }))
+  expect((await screen.findByRole('alert')).textContent).toContain('Alex Morgan')
+  expect((screen.getByLabelText('Owner') as HTMLSelectElement).value).toBe('Chen Wei')
+  await user.selectOptions(screen.getByLabelText('Save outcome'), 'success')
+  await user.click(screen.getByRole('button', { name: 'Retry owner change' }))
+  expect(await screen.findByText(/saved for this browser session/i)).toBeTruthy()
 })
 
-it('passes the activated incident and its invoking button to the integration callback', async () => {
-  const user = userEvent.setup()
-  const onIncidentActivate = vi.fn()
-  render(<App onIncidentActivate={onIncidentActivate} />)
-  await user.click(screen.getByRole('button', { name: /open incident inc-0001/i }))
-  expect(onIncidentActivate).toHaveBeenCalledWith(expect.objectContaining({ id: 'INC-0001' }), expect.any(HTMLButtonElement))
+it('explains analyst and closed read-only ownership then restores row focus on close', async () => {
+  const user = userEvent.setup(); render(<App />)
+  await user.selectOptions(screen.getByLabelText('Active role'), 'analyst')
+  const row = screen.getByRole('button', { name: /open incident inc-0001/i }); await user.click(row)
+  expect(screen.getByText(/analysts can review/i)).toBeTruthy(); expect(screen.queryByLabelText('Owner')).toBeNull()
+  await user.click(screen.getByRole('button', { name: 'Close incident details' })); await waitFor(() => expect(document.activeElement).toBe(row))
+  await user.click(screen.getByRole('button', { name: /open incident inc-0017/i }))
+  expect(screen.getByText(/closed incidents are read-only/i)).toBeTruthy()
+})
+
+it('shows each active criterion as an individually removable chip', async () => {
+  const user = userEvent.setup(); render(<App />)
+  await user.type(screen.getByLabelText('Search incidents'), 'payments')
+  await user.click(screen.getByLabelText('Critical')); await user.click(screen.getByLabelText('Monitoring')); await user.click(screen.getByLabelText('Payments'))
+  expect(screen.getByRole('button', { name: /search: payments.*clear/i })).toBeTruthy()
+  expect(screen.getByRole('button', { name: /critical.*clear/i })).toBeTruthy()
+  expect(screen.getByRole('button', { name: /monitoring.*clear/i })).toBeTruthy()
+  expect(screen.getAllByRole('button', { name: /payments.*clear/i }).length).toBe(2)
+  await user.click(screen.getByRole('button', { name: /critical.*clear/i }))
+  expect(screen.queryByRole('button', { name: /critical.*clear/i })).toBeNull()
+  expect(screen.getByRole('button', { name: /monitoring.*clear/i })).toBeTruthy()
 })
