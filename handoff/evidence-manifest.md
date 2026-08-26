@@ -95,3 +95,4 @@
 | Pending capture | [Issue #5](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/5), [PR #9](https://github.com/pfcstyle/agentic-engineering-demo-codex/pull/9) | Queue foundation, review and merge, zh/en | Verified 2026-08-26 |
 | Pending capture | [Issue #6](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/6), [PR #10](https://github.com/pfcstyle/agentic-engineering-demo-codex/pull/10) | Drawer, permissions and recovery, zh/en | Verified 2026-08-26 |
 | Pending capture | [Issue #7](https://github.com/pfcstyle/agentic-engineering-demo-codex/issues/7), [PR #11](https://github.com/pfcstyle/agentic-engineering-demo-codex/pull/11) | Approved responsive design integration, zh/en | Verified 2026-08-26 |
+| Pending capture | Stage 6 Make V7 parity correction | Corrective interaction mapping and final runtime proof, zh/en | Verified 2026-08-26 |
