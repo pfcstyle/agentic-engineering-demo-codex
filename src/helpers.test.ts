@@ -19,8 +19,8 @@ describe('incident queue helpers', () => {
   })
 
   it('uses OR within a filter group and AND between groups', () => {
-    const result = filterIncidents(incidents, { search: 'payments', severity: ['Critical', 'High'], status: ['New'], team: ['Payments'] })
-    expect(result.map((item) => item.id)).toEqual(['INC-0002'])
+    const result = filterIncidents(incidents, { search: 'payments', severity: ['Critical', 'High'], status: ['Monitoring'], team: ['Payments'] })
+    expect(result.map((item) => item.id)).toEqual(['INC-0002', 'INC-0003'])
   })
 
   it('sorts open work before closed, then severity, updated time, and incident id', () => {
